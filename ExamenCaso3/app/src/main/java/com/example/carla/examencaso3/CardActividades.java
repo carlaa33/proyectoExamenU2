@@ -1,13 +1,30 @@
 package com.example.carla.examencaso3;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+/**
+ * Created by carla on 25/02/18.
+ */
 
-public class CardActividades extends AppCompatActivity {
+public class CardActividades {
+    private String nombre,fechaInicio,fechaFin,creditos;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_card_actividades);
+    public CardActividades(String nombre, String fechaInicio, String fechaFin, String creditos) {
+        this.nombre = nombre;
+        this.fechaInicio= fechaInicio;
+        this.fechaFin = fechaFin;
+        this.creditos = creditos;
+    }
+    public String getNombre() {
+        return nombre;
+    }
+    public String getHoraInicio() {
+        return fechaInicio;
+    }
+
+    public String getHoraFin() {
+        return fechaFin;
+    }
+
+    public String getCreditos() {
+        return creditos;
     }
 }

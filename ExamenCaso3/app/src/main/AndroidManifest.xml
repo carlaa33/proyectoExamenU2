@@ -19,9 +19,12 @@
         <activity android:name=".VistaAlumnos" />
         <activity android:name=".VistaActividades" />
         <activity android:name=".CardAlumnos" />
-        <activity android:name=".CardActividades" />
         <activity android:name=".RegistroAlumno" />
-        <activity android:name=".RegistroActividad"></activity>
+        <activity android:name=".RegistroActividad" />
+        <activity android:name=".ActividadAlumno" />
+        <activity android:name=".ConsultaAlumno" />
+        <activity android:name=".ConsultaActividades" />
+        <activity android:name=".ActividadesAlumno"></activity>
     </application>
 
 </manifest>

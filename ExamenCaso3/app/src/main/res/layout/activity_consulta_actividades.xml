@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="9dp"
+        android:layout_marginTop="8dp"
         android:text="Fecha Fin:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editFF" />
@@ -30,20 +30,19 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
         android:layout_marginStart="16dp"
         android:text="Fecha Inicio:"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editFI"
+        app:layout_constraintBottom_toBottomOf="@+id/editFI"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="38dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="39dp"
+        android:layout_marginTop="33dp"
         android:text="Nombre:"
-        app:layout_constraintBottom_toTopOf="@+id/editFI"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -51,7 +50,7 @@
         android:id="@+id/editNombreAct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="19dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="@+id/IDAct"
@@ -61,7 +60,7 @@
         android:id="@+id/editFI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="9dp"
         android:ems="10"
         android:hint="YYYY-MM-DD"
         android:inputType="date"
@@ -72,11 +71,11 @@
         android:id="@+id/editFF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="25dp"
         android:ems="10"
         android:hint="YYYY-MM-DD"
         android:inputType="date"
-        app:layout_constraintStart_toStartOf="@+id/editFI"
+        app:layout_constraintStart_toStartOf="@+id/editCred"
         app:layout_constraintTop_toBottomOf="@+id/editFI" />
 
     <EditText
@@ -84,39 +83,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="14dp"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="21dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/editFF" />
 
     <Button
-        android:id="@+id/btnGuardarActividad"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnGuardarAct"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="34dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginEnd="1dp"
         android:text="Guardar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnCancelarActividad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="34dp"
-        android:layout_marginEnd="45dp"
-        android:text="Cancelar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/editCred"
+        app:layout_constraintStart_toStartOf="@+id/textView7" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginBottom="83dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="82dp"
         android:text="ID:"
+        app:layout_constraintBottom_toBottomOf="@+id/editNombreAct"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -124,12 +116,34 @@
         android:id="@+id/IDAct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:enabled="false"
+        android:layout_marginTop="23dp"
         android:ems="10"
+        android:enabled="false"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/editCred"
-        app:layout_constraintStart_toStartOf="@+id/editCred"
+        app:layout_constraintEnd_toEndOf="@+id/editFF"
+        app:layout_constraintStart_toStartOf="@+id/editFF"
+        app:layout_constraintTop_toBottomOf="@+id/btnConsultaAct" />
+
+    <Spinner
+        android:id="@+id/spinnerAct"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnConsultaAct"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnConsultaAct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="2dp"
+        android:text="Consultar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spinnerAct"
         app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

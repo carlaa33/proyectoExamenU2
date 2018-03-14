@@ -1,13 +1,36 @@
 package com.example.carla.examencaso3;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+/**
+ * Created by carla on 25/02/18.
+ */
 
-public class CardAlumnos extends AppCompatActivity {
+public class CardAlumnos{
+    private String nombre,control,cel,mail, carrera,creditos;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_card_alumnos);
+    public CardAlumnos(String nombre,String control,String cel,String mail, String carrera,String creditos) {
+        this.nombre = nombre;
+        this.control= control;
+        this.cel = cel;
+        this.mail = mail;
+        this.carrera=carrera;
+        this.creditos=creditos;
+    }
+    public String getNombre() {
+        return nombre;
+    }
+    public String getControl() {
+        return control;
+    }
+    public String getCel() {
+        return cel;
+    }
+    public String getMail() {
+        return mail;
+    }
+    public String getCarrera() {
+        return carrera;
+    }
+    public String getCreditos() {
+        return creditos;
     }
 }
